@@ -172,14 +172,31 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+    overflow: auto; /* Allow scrolling if content overflows */
+}
+
+.inside-container {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 20px;
+    width: 80%;
+    
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    /* position: relative; */
+    max-height: 70vh; /* Adjust to ensure visibility */
+    overflow-y: auto; /* Allow vertical scrolling if needed */
+}
+
 
   .show {
     visibility: visible;
     opacity: 1;
+    height: 90%;
   }
 
-  .inside-container {
+  /* .inside-container {
     display: flex;
     flex-direction: column;
     background-color: white;
@@ -192,7 +209,7 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     position: relative;
     /* To position close button correctly */
-  }
+  } */
 
   /* Additional styles for child elements */
   .setting-close {
