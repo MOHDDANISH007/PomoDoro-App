@@ -195,7 +195,7 @@
   .show {
     visibility: visible;
     opacity: 1;
-    height: 90%;
+    height: 100%;
   }
 
   /* .inside-container {
