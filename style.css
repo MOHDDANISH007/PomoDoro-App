@@ -18,7 +18,7 @@
   }
 
   /* Inner Container */
-  .container {
+    .container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,6 +28,7 @@
     width: 70%;
     height: 90%;
     border-radius: 20px;
+    position: relative;
   }
 
   /* Header */
@@ -153,7 +154,12 @@
     font-size: 20px;
     font-weight: 700;
     cursor: pointer;
+    position: absolute;
+    right: 65px; /* Position from the right */
+    top: 270px; /* Position from the top */
   }
+
+
 
   /* New Container and Its Child Elements */
   .new-container {
