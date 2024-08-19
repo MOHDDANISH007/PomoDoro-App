@@ -18,7 +18,7 @@
   }
 
   /* Inner Container */
-    .container {
+  .container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,7 +26,7 @@
     background-color: rgb(255, 255, 255);
     padding: 20px;
     width: 70%;
-    height: 90%;
+    height: 100vh;
     border-radius: 20px;
     position: relative;
   }
@@ -158,7 +158,6 @@
     right: 65px; /* Position from the right */
     top: 270px; /* Position from the top */
   }
-
 
 
   /* New Container and Its Child Elements */
