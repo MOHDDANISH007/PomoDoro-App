@@ -38,11 +38,13 @@
     margin-top: 10px;
   }
 
+ 
+  
   /* Buttons in Pomodoro Section */
   .Promodoro {
     display: flex;
-    gap: 10px;
-    margin-top: 10px;
+    gap: 50px;
+    margin-top: 20px;
   }
 
   .button {
@@ -66,7 +68,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 10px;
+    margin-top: 30px;
     position: relative;
   }
 
@@ -185,7 +187,7 @@
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     /* position: relative; */
-    max-height: 70vh; /* Adjust to ensure visibility */
+    max-height: 80vh; /* Adjust to ensure visibility */
     overflow-y: auto; /* Allow vertical scrolling if needed */
 }
 
