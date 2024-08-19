@@ -1,0 +1,580 @@
+  /* General Reset */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* Main Container */
+  .main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(154, 150, 202);
+    height: 100vh;
+    width: 100vw;
+    padding: 20px;
+  }
+
+  /* Inner Container */
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    width: 70%;
+    height: 90%;
+    border-radius: 20px;
+  }
+
+  /* Header */
+  .tick-tock {
+    color: rgb(163, 72, 255);
+    font-size: 50px;
+    margin-top: 10px;
+  }
+
+  /* Buttons in Pomodoro Section */
+  .Promodoro {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .button {
+    padding: 10px 20px;
+    color: rgb(163, 72, 255);
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .button:hover {
+    background-color: rgb(163, 72, 255);
+    color: white;
+  }
+
+  /* Countdown Circle */
+  .circle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    position: relative;
+  }
+
+  .count-down {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 50%;
+    color: rgb(163, 72, 255);
+    border: 2px solid rgb(163, 72, 255);
+    font-size: 30px;
+    padding: 40px;
+    width: 200px;
+    height: 200px;
+    box-shadow: 0 0 10px rgba(163, 72, 255, 0.5);
+  }
+
+  .rest {
+    height: 80px;
+    width: 80px;
+    border: 2px solid rgb(163, 72, 255);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: white;
+    background-color: rgb(163, 72, 255);
+    position: absolute;
+    right: -40px;
+    top: 129px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+  .rest:hover {
+    background-color: white;
+    color: rgb(163, 72, 255);
+  }
+
+  /* Start Button */
+  .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(163, 72, 255);
+    color: white;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    width: 200px;
+    height: 40px;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+  }
+
+  .btn:hover {
+    color: rgb(163, 72, 255);
+    background-color: rgba(182, 165, 165, 0.459);
+  }
+
+  /* Icon Hover Effects */
+  .icon {
+    margin-top: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .icon:hover {
+    transform: scale(1.2);
+  }
+
+  /* Settings Section */
+  .setting {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10px;
+    color: rgb(163, 72, 255);
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  /* New Container and Its Child Elements */
+  .new-container {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .show {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .inside-container {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 20px;
+    width: 80%;
+    /* Adjusted to cover more of the background */
+    max-width: 600px;
+    /* Set a maximum width for better control */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    /* To position close button correctly */
+  }
+
+  /* Additional styles for child elements */
+  .setting-close {
+    display: flex;
+    justify-content: space-between;
+    font-size: 30px;
+    border-bottom: 2px solid rgba(112, 98, 98, 0.432);
+    padding-bottom: 10px;
+  }
+
+  .setting {
+    padding-left: 20px;
+    font-size: 35px;
+  }
+
+  .close {
+    padding-right: 20px;
+    cursor: pointer;
+    font-size: 40px;
+    font-weight: 800;
+  }
+
+  .Times {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .Times h3 {
+    font-size: 30px;
+    font-weight: 500;
+  }
+
+  .text {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .p {
+    padding: 5px;
+    border: 2px solid rgba(141, 105, 105, 0.47);
+    background-color: bisque;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  .buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border-bottom: 2px solid rgba(112, 98, 98, 0.432);
+  }
+
+  .p1 {
+    border: 2px solid white;
+    padding: 10px;
+    font-size: 30px;
+    font-weight: 500;
+    transition: all 0.5s ease;
+    border-radius: 8px;
+  }
+
+  .p1:hover {
+    background-color: rgba(100, 66, 66, 0.336);
+  }
+
+  .font-size {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-bottom: 10px;
+  }
+
+  .font-h3 {
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 500px;
+  }
+
+
+  .font-p {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    border-bottom: 2px solid rgba(112, 98, 98, 0.432);
+    padding: 10px;
+    text-align: center;
+  }
+
+  .f-p {
+    padding: 20px;
+    width: 40px;
+    height: 40px;
+    border: 2px solid black;
+    border-radius: 50%;
+    cursor: pointer;
+
+  }
+
+  .font-a {
+    font-family: cursive;
+  }
+
+  .font-b {
+    font-family: poppins, sans-serif;
+  }
+
+  .color {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-bottom: 10px;
+  }
+
+  .color-h3 {
+    margin-top: 5px;
+    padding: 5px;
+    font-size: 50px;
+  }
+
+  .color-p {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    border-bottom: 2px solid rgba(112, 98, 98, 0.432);
+    padding: 10px;
+  }
+
+  .c-p {
+    padding: 20px;
+    width: 40px;
+    height: 40px;
+    border: 2px solid black;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  .rd {
+    background-color: red;
+  }
+
+  .cy {
+    background-color: cyan;
+  }
+
+  .bl {
+    background-color: rgb(154, 150, 202);
+  }
+
+  .apply-btn {
+    margin-top: 20px;
+    padding: 10px;
+    border: 2px solid rgba(141, 105, 105, 0.47);
+    background-color: bisque;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 8px; 
+    transition: all 0.5s ease;
+  }
+  
+  .apply-btn:hover {
+    background-color: rgba(100, 66, 66, 0.336);
+  }
+
+
+  /* Basic styling for .up and .down */
+  .up,
+  .down {
+    display: inline-block;
+    width: 24px;
+    /* Adjust as needed */
+    height: 24px;
+    /* Adjust as needed */
+    background-color: rgba(0, 0, 0, 0.1);
+    /* Light background for visibility */
+    border-radius: 50%;
+    /* Circular shape */
+    text-align: center;
+    cursor: pointer;
+    margin: 5px;
+    transition: all 0.3s ease, transform 0.3s ease;
+  }
+
+  /* Hover effect for .up and .down */
+  .up:hover,
+  .down:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    /* Darker background on hover */
+    transform: scale(1.1);
+    /* Slightly increase size on hover */
+  }
+
+
+
+
+  /* Specific styling for .up (increment) */
+
+
+
+  /* Mobile Styles (up to 480px) */
+/* Desktop Styles (769px and up) */
+@media (max-width: 480px) {
+  .main-container {
+    padding: 10px;
+  }
+
+  .container {
+    width: 90%;
+    padding: 10px;
+  }
+
+  .tick-tock {
+    font-size: 30px;
+  }
+
+  .button {
+    padding: 8px 16px;
+    font-size: 16px;
+  }
+
+  .count-down {
+    font-size: 24px;
+    padding: 20px;
+    width: 150px;
+    height: 150px;
+  }
+
+  .rest {
+    height: 60px;
+    width: 60px;
+    font-size: 24px;
+    right: -30px;
+    top: 100px;
+  }
+
+  .btn {
+    width: 150px;
+    height: 35px;
+    font-size: 16px;
+  }
+
+  .icon {
+    font-size: 24px;
+  }
+
+  .setting {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .new-container .inside-container {
+    width: 90%;
+    padding: 10px;
+  }
+
+  .setting-close {
+    font-size: 24px;
+  }
+
+  .Times h3 {
+    font-size: 24px;
+  }
+
+  .p {
+    font-size: 16px;
+    padding: 4px;
+  }
+
+  .p1 {
+    font-size: 24px;
+  }
+
+  .font-h3 {
+    font-size: 300px;
+  }
+
+  .f-p, .c-p {
+    width: 30px;
+    height: 30px;
+  }
+
+  .font-size {
+    padding: 0;
+  }
+
+  .color-h3 {
+    font-size: 30px;
+  }
+}
+
+/* Tablet Styles (481px to 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .main-container {
+    padding: 15px;
+  }
+
+  .container {
+    width: 80%;
+    padding: 15px;
+  }
+
+  .tick-tock {
+    font-size: 40px;
+  }
+
+  .button {
+    padding: 10px 20px;
+    font-size: 18px;
+  }
+
+  .count-down {
+    font-size: 28px;
+    padding: 30px;
+    width: 180px;
+    height: 180px;
+  }
+
+  .rest {
+    height: 70px;
+    width: 70px;
+    font-size: 26px;
+    right: -35px;
+    top: 115px;
+  }
+
+  .btn {
+    width: 180px;
+    height: 38px;
+    font-size: 18px;
+  }
+
+  .icon {
+    font-size: 28px;
+  }
+
+  .setting {
+    font-size: 18px;
+    padding: 15px;
+  }
+
+  .new-container .inside-container {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .setting-close {
+    font-size: 26px;
+  }
+
+  .Times h3 {
+    font-size: 26px;
+  }
+
+  .p {
+    font-size: 18px;
+    padding: 6px;
+  }
+
+  .p1 {
+    font-size: 28px;
+  }
+
+  .font-h3 {
+    font-size: 400px;
+  }
+
+  .f-p, .c-p {
+    width: 35px;
+    height: 35px;
+  }
+
+  .font-size {
+    padding: 10px;
+  }
+
+  .color-h3 {
+    font-size: 40px;
+  }
+}

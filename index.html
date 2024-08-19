@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+
+<body class="body">
+    <div class="main-container">
+        <div class="container">
+            <div class="tick-tock">
+                <h1>Tick Tock</h1>
+            </div>
+
+            <div class="Promodoro">
+                <button id="pomodoro" class="button">Pomodoro</button>
+                <button id="short" class="button">Short Break</button>
+                <button id="long" class="button">Long Break</button>
+            </div>
+
+            <div class="circle">
+                <div class="count-down">
+                    <h1 id="time">25:00</h1>
+                    <p class="rest">Rest</p>
+                </div>
+                <div class="start">
+                    <div class="btn">
+                        <p>Start</p>
+                    </div>
+                </div>
+
+                <div class="setting">
+                    <p class="icon"><img src="icons8-settings-50.svg" alt="click here"></p>
+                </div>
+
+                <div class="new-container">
+                    <div class = "inside-container">
+                      <div class="setting-close">
+                        <p class="setting">Setting</p>
+                        <p class="close">&times;</p>
+                      </div>
+                      
+                      <div class="Times">
+                        <h3>Times (Minutes)</h3>
+                        
+                        <div class="text">
+                          <p class="p">Pomodoro</p>
+                          <p class="p">Short Time</p>
+                          <p class="p">Long Time</p>
+                        </div>
+                        
+                        <div class="buttons">
+                          <p id="pomodoro_25" class="p1">25 <span><img class="up" src="angle-up-solid.svg" alt="" /></span> <span> <img class="down" src="angle-down-solid.svg" alt="" /> </span></p>
+                          <p id="short_5" class="p1">5 <span><img class="up" src="angle-up-solid.svg" alt="" /></span> <span> <img class="down" src="angle-down-solid.svg" alt="" /> </span></p>
+                          <p id="long_42" class="p1">42 <span><img class="up" src="angle-up-solid.svg" alt="" /></span> <span> <img class="down" src="angle-down-solid.svg" alt="" /> </span></p>
+                        </div>
+                        
+                        <div class="font-size">
+                          <h3 class="font-h3">Font Size Heading</h3>
+                          <div class="font-p">
+                              <p id="A" class="f-p font-a">A</p>
+                              <p id="B" class="f-p font-b">B</p>
+                              <p id="C" class="f-p font-c">C</p>
+                          </div>
+                      </div>
+                        
+                        <div class="color">
+                          <h3 class="color-h3">color</h3>
+                          
+                          <div class="color-p">
+                            <p id="red" class="c-p rd"></p>
+                            <p id="cyan" class="c-p cy"></p>
+                            <p id="blue" class="c-p bl"></p>
+                          </div>
+                        </div>
+
+
+                        <div class="apply">
+                          <button class="apply-btn">Apply</button>
+                        </div>
+                      </div>
+                      
+                      
+                    </div>
+                  </div>
+
+                <!-- <img src="angle-down-solid.svg" alt=""> -->
+            </div>
+        </div>
+    </div>
+
+    <script src="js.js"></script>
+</body>
+
+</html>
